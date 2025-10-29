@@ -1,0 +1,159 @@
+.testimonioSection {
+  background: #0d0d0d;
+  padding: 6rem 0;
+  text-align: center;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+  box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+}
+
+.titleContainer {
+  margin-bottom: 3rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #d4b28c;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.8rem;
+}
+
+.line {
+  width: 80px;
+  height: 3px;
+  background-color: #d4b28c;
+  margin: 0 auto;
+}
+
+/* ===== SLIDER ===== */
+.sliderContainer {
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.testimonioRow {
+  display: flex;
+  gap: 2rem;
+  padding: 1rem 0;
+  width: max-content;
+  animation: scrollInfinito 40s linear infinite;
+}
+
+/* ===== CARD ===== */
+.testimonioCard {
+  flex: 0 0 320px; /* ancho fijo mínimo */
+  background: #1a1a1a;
+  border: 1px solid rgba(212, 178, 140, 0.25);
+  border-radius: 25px;
+  padding: 2.5rem 2rem;
+  color: #f5f0e6;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  aspect-ratio: 1 / 1; /* asegura que sea cuadrado en desktop */
+}
+
+.testimonioCard:hover {
+  transform: translateY(-10px);
+  border-color: #d4b28c;
+  box-shadow: 0 10px 30px rgba(212, 178, 140, 0.25);
+}
+
+.fotoCliente {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 3px solid #d4b28c;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.testimonioCard h3 {
+  color: #fff;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.estrellas {
+  color: #d4b28c;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+}
+
+.texto {
+  color: #ccc;
+  font-style: italic;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* ===== SOMBRAS LATERALES ===== */
+.leftShadow,
+.rightShadow {
+  position: absolute;
+  top: 0;
+  width: 15%;
+  height: 100%;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.leftShadow {
+  left: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.9), transparent 90%);
+  box-shadow: inset 40px 0 60px rgba(212, 178, 140, 0.1);
+}
+
+.rightShadow {
+  right: 0;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.9), transparent 90%);
+  box-shadow: inset -40px 0 60px rgba(212, 178, 140, 0.1);
+}
+
+/* ===== ANIMACIÓN ===== */
+@keyframes scrollInfinito {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+  .testimonioRow {
+    overflow-x: auto; /* scroll horizontal real */
+    width: 100%;
+    gap: 1rem;
+    padding: 1rem;
+    animation: none; /* quitar animación infinita en móvil */
+  }
+
+  .testimonioCard {
+    flex: 0 0 70%; /* ocupa más ancho pero se mantiene proporcionado */
+    aspect-ratio: auto; /* quitar para que no se deforme */
+    height: auto;
+    padding: 1rem 1.5rem;
+  }
+
+  .leftShadow,
+  .rightShadow {
+    display: none; /* sombras no necesarias en scroll móvil */
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+}

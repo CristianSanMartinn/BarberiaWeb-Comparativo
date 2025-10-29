@@ -1,0 +1,118 @@
+.contactSection {
+  position: relative;
+  padding: 100px 20px;
+  text-align: center;
+  background: #111;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Fondo difuminado sutil */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top left, rgba(212, 178, 140, 0.1), transparent 70%);
+  z-index: 0;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 2.4rem;
+  color: #d4b28c;
+  margin-bottom: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.description {
+  max-width: 700px;
+  margin: 0 auto 50px auto;
+  font-size: 1.1rem;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+/* Íconos de contacto */
+.contactInfo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 35px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.iconItem {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.iconItem:hover {
+  transform: translateY(-5px);
+  background: rgba(212, 178, 140, 0.1);
+}
+
+.icon {
+  font-size: 2.2rem;
+  color: #d4b28c;
+  margin-bottom: 10px;
+}
+
+.iconItem h3 {
+  font-size: 1.3rem;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.iconItem p {
+  color: #ccc;
+  font-size: 1rem;
+}
+
+/* Mapa */
+.mapContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.mapa {
+  border: 2px solid #d4b28c;
+  border-radius: 12px;
+  width: 85%;
+  max-width: 700px;
+  height: 380px;
+  filter: grayscale(20%) contrast(95%);
+  transition: transform 0.3s ease;
+}
+
+.mapa:hover {
+  transform: scale(1.02);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contactInfo {
+    grid-template-columns: 1fr;
+  }
+
+  .mapa {
+    width: 100%;
+    height: 320px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+}

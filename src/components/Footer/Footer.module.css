@@ -1,0 +1,148 @@
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 60px 20px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ===========================
+   COLUMNA 1: LOGO Y SOCIAL
+=========================== */
+.footer-logo {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-logo-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.footer-logo-img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 2px solid #d4b28c;
+  background-color: #222;
+  padding: 4px;
+}
+
+.footer-logo h2 {
+  font-size: 1.6rem;
+  color: #d4b28c;
+  margin: 0;
+}
+
+.footer-logo p {
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.footer-social a {
+  color: #fff;
+  margin-right: 15px;
+  font-size: 1.2rem;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.footer-social a:hover {
+  color: #d4b28c;
+  transform: scale(1.1);
+}
+
+/* ===========================
+   COLUMNA 2: ENLACES
+=========================== */
+.footer-links {
+  flex: 1;
+  min-width: 180px;
+}
+
+.footer-links h3 {
+  color: #fff;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #d4b28c;
+}
+
+/* ===========================
+   COLUMNA 3: CONTACTO
+=========================== */
+.footer-contact {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-contact h3 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.footer-contact p {
+  color: #ccc;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+/* ===========================
+   PARTE INFERIOR
+=========================== */
+.footer-bottom {
+  border-top: 1px solid #333;
+  text-align: center;
+  padding-top: 20px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-logo-header {
+    justify-content: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+}

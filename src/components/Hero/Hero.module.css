@@ -1,0 +1,94 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  background-image: url('/imagen/postada-principal.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: grayscale(100%);
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.subtitle {
+  font-size: 1rem;
+  letter-spacing: 3px;
+  color: #d4b28c;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #ddd;
+}
+
+.line {
+  width: 60px;
+  height: 3px;
+  background-color: #d4b28c;
+  margin: 0 auto 2rem;
+}
+
+.button {
+  background-color: #d4b28c;
+  color: #000;
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.button:hover {
+  background-color: #c09a6c;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .hero {
+    height: 70vh;
+  }
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+  .description {
+    font-size: 1rem;
+  }
+
+}

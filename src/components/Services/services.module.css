@@ -1,0 +1,92 @@
+.serviciosSection {
+  background-color: #0a0a0a;
+  color: #f5f0e6;
+  padding: 2rem 2rem;
+  text-align: center;
+}
+
+.tituloServicios h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #d4b28c;
+}
+
+.subtitulo {
+  font-weight: 300;
+  color: #ccc;
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  line-height: 1.5;
+}
+
+.serviciosGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.servicioCard {
+  background-color: #f5f0e6;
+  color: #000;
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+  max-width: 250px;
+  text-align: center;
+}
+
+.servicioCard:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 6px 15px rgba(212, 178, 140, 0.4);
+}
+
+.iconoImagen {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  margin-bottom: 0.8rem;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.2));
+}
+
+.servicioCard h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #111;
+}
+
+.servicioCard p {
+  font-size: 0.9rem;
+  color: #333;
+  line-height: 1.4;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .serviciosSection {
+    padding: 3rem 1rem;
+  }
+
+  .serviciosGrid {
+    grid-template-columns: repeat(2, 2fr);
+    gap: 1.5rem;
+  }
+
+  .tituloServicios h2 {
+    font-size: 2rem;
+  }
+
+  .servicioCard {
+    max-width: 200px;
+    padding: 1rem;
+  }
+
+  .iconoImagen {
+    width: 40px;
+    height: 40px;
+  }
+}
+

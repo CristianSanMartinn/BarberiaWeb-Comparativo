@@ -1,0 +1,144 @@
+.aboutSection {
+  background: #111;
+  color: #f5f0e6;
+  padding: 6rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+/* ========================= */
+/* TEXTO */
+/* ========================= */
+.aboutText {
+  flex: 1;
+  min-width: 320px;
+  animation: fadeInUp 1s ease;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #d4b28c;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.8rem;
+}
+
+.line {
+  width: 60px;
+  height: 3px;
+  background-color: #d4b28c;
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #ddd;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+.description span {
+  color: #d4b28c;
+  font-weight: 600;
+}
+
+/* ========================= */
+/* IMAGEN */
+/* ========================= */
+.aboutImage {
+  flex: 1;
+  position: relative;
+  min-width: 320px;
+  height: 450px;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  animation: fadeInRight 1s ease;
+}
+
+.aboutImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease, filter 0.8s ease;
+}
+
+.aboutImage:hover img {
+  transform: scale(1.05);
+  filter: brightness(0.8);
+}
+
+/* Capa dorada transparente */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, rgba(212, 178, 140, 0.25) 100%);
+}
+
+/* ========================= */
+/* ANIMACIONES */
+/* ========================= */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ========================= */
+/* RESPONSIVO */
+/* ========================= */
+@media (max-width: 768px) {
+  .aboutContainer {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .aboutImage {
+    height: 350px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .line {
+    margin: 0 auto 1.5rem;
+  }
+}
